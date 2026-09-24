@@ -2,11 +2,11 @@
 
 An interactive Three.js hero for a marketing, growth and brand-strategy portfolio. A fractured basalt monolith hangs in a blue-black haze. A white-blue core burns in the gap between its two halves, and dark, translucent ribbons circulate around the break.
 
-![Desktop hero](docs/screenshots/desktop-1672x941.png)
+![Desktop hero](docs/screenshots/desktop-1672x941.jpg)
 
 | Mobile | Hover / scroll states |
 | --- | --- |
-| <img src="docs/screenshots/mobile-390x844.png" width="260" alt="Mobile hero" /> | <img src="docs/screenshots/states.png" width="520" alt="Idle, hover, 50% and 100% scroll-out" /> |
+| <img src="docs/screenshots/mobile-390x844.jpg" width="260" alt="Mobile hero" /> | <img src="docs/screenshots/states.jpg" width="520" alt="Idle, hover, 50% and 100% scroll-out" /> |
 
 The repository was empty, so this is a **self-contained static site** (Vite + TypeScript + Three.js, no framework). It includes real destination sections for the navigation (Work, About, Contact) with clearly marked placeholder content. To move the hero into an existing site, see [Integrating into another site](#integrating-into-another-site).
 
@@ -204,7 +204,7 @@ Run in headless Chromium 140 (Playwright 1.56) with **SwiftShader software WebGL
 - WebGL disabled → unsupported state with the poster, toggle hidden.
 - Mobile (390×844, touch): no overflow; touch scrolling moves the page.
 
-Screenshots in `docs/screenshots/`: desktop 1672×941 (the mockup's size), 1440×900 and 1280×720, tablet 834×1112, mobile 390×844 at DPR 2, plus a states sheet (idle / hover / 50% / 100% scroll). `docs/media/hero-motion.mp4` is a deterministic 8 s recording. Frames are rendered at exact timestamps, so it shows the intended motion rather than software-rendering stutter, including a pointer drift and a hover.
+Screenshots in `docs/screenshots/` are from the production build at t = 7.5 s with the **high** tier forced (`npm run capture -- shots --t 7.5 --query quality=high`): desktop 1672×941 (the mockup's size), 1440×900 and 1280×720, tablet 834×1112, and mobile 390×844 at DPR 2 (rendered at the 1.75 cap). Real phones start on the low or medium tier: fewer particles, 512² textures, no real-time shadows. A states sheet (idle / hover / 50% / 100% scroll) is included too. `docs/media/hero-motion.mp4` is a deterministic 8 s recording. Frames are rendered at exact timestamps, so it shows the intended motion rather than software-rendering stutter, including a pointer drift and a hover.
 
 ### Measured performance
 

@@ -51,6 +51,7 @@ export class HeroSection {
   private motion: boolean;
   private params = new URLSearchParams(location.search);
   private reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
+  private cleanup: (() => void)[] = [];
 
   constructor(root: HTMLElement) {
     this.hero = root;
@@ -73,6 +74,7 @@ export class HeroSection {
     const ro = new ResizeObserver(() => this.placePoster());
     ro.observe(this.visual);
     ro.observe(this.stage);
+    this.cleanup.push(() => ro.disconnect());
     if (this.poster && !this.poster.complete) {
       this.poster.addEventListener('load', () => this.poster?.classList.add('is-ready'), { once: true });
     } else {
@@ -84,10 +86,16 @@ export class HeroSection {
       return;
     }
 
-    this.toggle?.addEventListener('click', () => this.setMotion(!this.motion, true));
-    this.reducedQuery.addEventListener('change', (e) => {
+    const onToggle = () => this.setMotion(!this.motion, true);
+    const onReduced = (e: MediaQueryListEvent) => {
       if (readMotionChoice() === null) this.setMotion(!e.matches, false);
-    });
+    };
+    this.toggle?.addEventListener('click', onToggle);
+    this.reducedQuery.addEventListener('change', onReduced);
+    this.cleanup.push(
+      () => this.toggle?.removeEventListener('click', onToggle),
+      () => this.reducedQuery.removeEventListener('change', onReduced),
+    );
     this.updateToggle();
 
     if (posterMode || captureMode) {
@@ -177,6 +185,9 @@ export class HeroSection {
   }
 
   dispose() {
+    this.cleanup.forEach((fn) => fn());
+    this.cleanup.length = 0;
     this.scene?.dispose();
+    this.scene = null;
   }
 }

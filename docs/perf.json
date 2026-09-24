@@ -1,0 +1,58 @@
+[
+  {
+    "label": "desktop 1440x900",
+    "tier": "high",
+    "frames": 5,
+    "medianFrameMs": 2083.3,
+    "p95FrameMs": 2399.8,
+    "fps": 0.5,
+    "medianCpuMs": 2.3,
+    "p95CpuMs": 5,
+    "drawCalls": 46,
+    "triangles": 168003,
+    "dpr": 1,
+    "canvas": "1440x900"
+  },
+  {
+    "label": "desktop 1440x900",
+    "tier": "medium",
+    "frames": 5,
+    "medianFrameMs": 1783.2,
+    "p95FrameMs": 3133.3,
+    "fps": 0.6,
+    "medianCpuMs": 2.3,
+    "p95CpuMs": 5.7,
+    "drawCalls": 44,
+    "triangles": 101055,
+    "dpr": 1,
+    "canvas": "1440x900"
+  },
+  {
+    "label": "desktop 1440x900",
+    "tier": "low",
+    "frames": 11,
+    "medianFrameMs": 866.6,
+    "p95FrameMs": 900,
+    "fps": 1.2,
+    "medianCpuMs": 1.6,
+    "p95CpuMs": 3.8,
+    "drawCalls": 37,
+    "triangles": 32415,
+    "dpr": 1,
+    "canvas": "1440x900"
+  },
+  {
+    "label": "mobile 390x844",
+    "tier": "low",
+    "frames": 40,
+    "medianFrameMs": 233.3,
+    "p95FrameMs": 500,
+    "fps": 4.3,
+    "medianCpuMs": 1.4,
+    "p95CpuMs": 2.7,
+    "drawCalls": 37,
+    "triangles": 32415,
+    "dpr": 1,
+    "canvas": "390x844"
+  }
+]

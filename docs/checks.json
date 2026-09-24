@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Hero text visible before 3D loads",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Scene goes live",
+    "pass": true,
+    "detail": "true"
+  },
+  {
+    "name": "Canvas does not intercept pointer events",
+    "pass": true,
+    "detail": "none"
+  },
+  {
+    "name": "Link target #work exists",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Link target #about exists",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Link target #contact exists",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "“View projects” scrolls to #work",
+    "pass": true,
+    "detail": "top=0 hash=#work"
+  },
+  {
+    "name": "Canvas drawing buffer follows resize",
+    "pass": true,
+    "detail": "{\"cw\":600,\"rw\":600,\"sw\":600,\"vw\":600}"
+  },
+  {
+    "name": "No horizontal overflow after resize",
+    "pass": true,
+    "detail": "{\"cw\":600,\"rw\":600,\"sw\":600,\"vw\":600}"
+  },
+  {
+    "name": "Motion toggle works from keyboard",
+    "pass": true,
+    "detail": "Play motion"
+  },
+  {
+    "name": "Motion choice remembered for the session",
+    "pass": true,
+    "detail": "Play motion"
+  },
+  {
+    "name": "No console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Reduced motion: no live canvas",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Reduced motion: poster shown",
+    "pass": true,
+    "detail": "opacity=1"
+  },
+  {
+    "name": "Reduced motion: toggle offers “Play motion”",
+    "pass": true,
+    "detail": "Play motion"
+  },
+  {
+    "name": "Asset failure → fallback state",
+    "pass": true,
+    "detail": "fallback"
+  },
+  {
+    "name": "Asset failure → poster kept, no canvas",
+    "pass": true,
+    "detail": "opacity=1 canvas=0"
+  },
+  {
+    "name": "No WebGL → unsupported state with poster",
+    "pass": true,
+    "detail": "unsupported"
+  },
+  {
+    "name": "No WebGL → motion toggle hidden",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Mobile: no horizontal overflow",
+    "pass": true,
+    "detail": "[390,390]"
+  },
+  {
+    "name": "Mobile: touch scroll moves the page",
+    "pass": true,
+    "detail": "scrollY=500"
+  }
+]

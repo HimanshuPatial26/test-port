@@ -197,7 +197,7 @@ async function record() {
     const hover = k > 0.45 && k < 0.8 ? Math.min(1, (k - 0.45) * 8) * Math.min(1, (0.8 - k) * 8) : 0;
     const px = Math.sin(k * Math.PI) * 0.35;
     await page.evaluate(([tt, hv, x]) => window.__hero.renderAt(tt, { hover: hv, pointer: [x, 0.05] }), [t, hover, px]);
-    await page.locator('.hero').screenshot({ path: path.join(dir, `f${String(i).padStart(4, '0')}.png`) });
+    await page.screenshot({ path: path.join(dir, `f${String(i).padStart(4, '0')}.png`) });
     if (i % 30 === 0) console.log(`frame ${i}/${n}`);
   }
   await browser.close();
